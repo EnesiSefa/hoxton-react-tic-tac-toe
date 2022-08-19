@@ -5,22 +5,11 @@ import "./App.css";
 
 function App() {
   const [board, setBoard] = useState("");
-  function randomXo() {
-    let random = Math.random();
-    if (random < 0.4) setBoard("x");
-    if (random > 0.4) setBoard("y");
-  }
 
   return (
     <div className="App">
       <div className="grid-container">
-        <div
-          onClick={() => {
-            setBoard("")
-            randomXo();
-          }}
-          className="field-1"
-        >
+        <div className="field-1">
           {board === "x" ? (
             <img src={logoX} alt="" />
           ) : (
