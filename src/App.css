@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+.App {
+  text-align: center;
+  place-content: center;
+  position: absolute;
+  bottom: 300px;
+  right: 500px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "field-1 field-2 field-3" 100px
+    "field-4 field-5 field-6" 100px
+    "field-7 field-8 field-9" 100px / 100px 100px 100px;
+}
+
+.field-1 {
+  grid-area: field-1;
+  display: grid;
+  
+}
+
+.field-2 {
+  grid-area: field-2;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  
+}
+.field-3 {
+  grid-area: field-3;
+  
+}
+.field-4 {
+  grid-area: field-4;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  
+}
+.field-5 {
+  grid-area: field-5;
+
+  border: 1px solid black;
+}
+.field-6 {
+  grid-area: field-6;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+ 
+}
+.field-7 {
+  grid-area: field-7;
+  
+}
+.field-8 {
+  grid-area: field-8;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  
+}
+.field-9 {
+  grid-area: field-9;
+  
+}
