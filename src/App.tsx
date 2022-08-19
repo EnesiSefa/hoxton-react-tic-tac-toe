@@ -1,14 +1,32 @@
 import { useState } from "react";
-import logo from "./logo.svg";
+import logoX from "../public/tic-tac-toe-0.png";
+import logoO from "../public/tic-tac-toe-x.png";
 import "./App.css";
 
 function App() {
-  const [board, setBoard] = useState();
+  const [board, setBoard] = useState("");
+  function randomXo() {
+    let random = Math.random();
+    if (random < 0.4) setBoard("x");
+    if (random > 0.4) setBoard("y");
+  }
 
   return (
     <div className="App">
       <div className="grid-container">
-        <div className="field-1"></div>
+        <div
+          onClick={() => {
+            setBoard("")
+            randomXo();
+          }}
+          className="field-1"
+        >
+          {board === "x" ? (
+            <img src={logoX} alt="" />
+          ) : (
+            <img src={logoO} alt="" />
+          )}
+        </div>
         <div className="field-2"></div>
         <div className="field-3"></div>
         <div className="field-4"></div>
